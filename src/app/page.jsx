@@ -39,16 +39,15 @@ function Hero() {
         />
         <div className="pt-16 pb-24 sm:pt-24 sm:pb-32 md:pt-32 md:pb-48">
           <h1 className="font-display text-6xl/[0.9] font-medium tracking-tight text-balance text-gray-950 sm:text-8xl/[0.8] md:text-9xl/[0.8]">
-            Close every deal.
+            Zoptymalizuj pracę szpitala.
           </h1>
           <p className="mt-8 max-w-lg text-xl/7 font-medium text-gray-950/75 sm:text-2xl/8">
-            Radiant helps you sell more by revealing sensitive information about
-            your customers.
+            Nasz system integruje dane z bloku operacyjnego i oddziałów, umożliwiając monitorowanie czasu operacji, zarządzanie pacjentami oraz optymalizację pracy szpitala.
           </p>
           <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
-            <Button href="#">Get started</Button>
+            <Button href="#">Rozpocznij już dziś</Button>
             <Button variant="secondary" href="/pricing">
-              See pricing
+                Poznaj ofertę
             </Button>
           </div>
         </div>
@@ -62,7 +61,7 @@ function FeatureSection() {
     <div className="overflow-hidden">
       <Container className="pb-24">
         <Heading as="h2" className="max-w-3xl">
-          A snapshot of your entire sales pipeline.
+            Monitoruj, analizuj i optymalizuj, zarządzaj szpitalem, jak nigdy dotąd
         </Heading>
         <Screenshot
           width={1216}
@@ -78,9 +77,9 @@ function FeatureSection() {
 function BentoSection() {
   return (
     <Container>
-      <Subheading>Sales</Subheading>
+      <Subheading>Zarządzanie szpitalem</Subheading>
       <Heading as="h3" className="mt-2 max-w-3xl">
-        Know more about your customers than they do.
+        Kompleksowe monitorowanie operacji i pacjentów
       </Heading>
 
       <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
