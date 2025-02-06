@@ -1,0 +1,7 @@
+/node_modules
+/vendor
+/.vscode/*
+.env
+.DS_Store
+.phpunit.result.cache
+.phpunit.cache/*
