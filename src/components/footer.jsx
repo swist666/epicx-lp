@@ -10,20 +10,19 @@ function CallToAction() {
   return (
     <div className="relative pt-20 pb-16 text-center sm:py-24">
       <hgroup>
-        <Subheading>Get started</Subheading>
+        <Subheading>Rozpocznij działanie</Subheading>
         <p className="mt-6 text-3xl font-medium tracking-tight text-gray-950 sm:text-5xl">
-          Ready to dive in?
+          Zacznij optymalizację już dziś.
           <br />
-          Start your free trial today.
+          Napisz do nas a przygotujemy dla Ciebie ofertę.
         </p>
       </hgroup>
       <p className="mx-auto mt-6 max-w-xs text-sm/6 text-gray-500">
-        Get the cheat codes for selling and unlock your team&apos;s revenue
-        potential.
+        Odblokuj swoje możliwości już dziś. 
       </p>
       <div className="mt-6">
-        <Button className="w-full sm:w-auto" href="#">
-          Get started
+        <Button className="w-full sm:w-auto" href="mailto:gp@epicx.pl">
+          Napisz do nas
         </Button>
       </div>
     </div>
@@ -148,7 +147,7 @@ function SocialLinks() {
 function Copyright() {
   return (
     <div className="text-sm/6 text-gray-950">
-      &copy; {new Date().getFullYear()} Radiant Inc.
+      &copy; {new Date().getFullYear()} epicx sp. z o.o.
     </div>
   )
 }
@@ -169,7 +168,7 @@ export function Footer() {
                   </PlusGridItem>
                 </div>
                 <div className="col-span-2 grid grid-cols-2 gap-x-8 gap-y-12 lg:col-span-4 lg:grid-cols-subgrid lg:pt-6">
-                  <Sitemap />
+                  {/* <Sitemap /> */}
                 </div>
               </div>
             </PlusGridRow>

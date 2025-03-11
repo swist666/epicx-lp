@@ -29,26 +29,26 @@ function Hero() {
         <Navbar
           banner={
             <Link
-              href="/blog/radiant-raises-100m-series-a-from-tailwind-ventures"
+              href="mailto:gp@epicx.pl"
               className="flex items-center gap-1 rounded-full bg-fuchsia-950/35 px-3 py-0.5 text-sm/6 font-medium text-white data-hover:bg-fuchsia-950/30"
             >
-              Radiant raises $100M Series A from Tailwind Ventures
+              Napisz do nas
               <ChevronRightIcon className="size-4" />
             </Link>
           }
         />
         <div className="pt-16 pb-24 sm:pt-24 sm:pb-32 md:pt-32 md:pb-48">
-          <h1 className="font-display text-6xl/[0.9] font-medium tracking-tight text-balance text-gray-950 sm:text-8xl/[0.8] md:text-9xl/[0.8]">
-            Zoptymalizuj pracę szpitala.
+          <h1 className="font-display text-6xl/[0.9] font-medium tracking-tight text-balance text-gray-950 sm:text-8xl/[0.8] md:text-8xl/[0.8]">
+          Redefiniujemy Zarządzanie W Ochronie Zdrowia.
           </h1>
           <p className="mt-8 max-w-lg text-xl/7 font-medium text-gray-950/75 sm:text-2xl/8">
             Nasz system integruje dane z bloku operacyjnego i oddziałów, umożliwiając monitorowanie czasu operacji, zarządzanie pacjentami oraz optymalizację pracy szpitala.
           </p>
           <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
-            <Button href="#">Rozpocznij już dziś</Button>
-            <Button variant="secondary" href="/pricing">
+            <Button href="mailto:gp@epicx.pl">Rozpocznij już dziś</Button>
+            {/* <Button variant="secondary" href="/pricing">
                 Poznaj ofertę
-            </Button>
+            </Button> */}
           </div>
         </div>
       </Container>
@@ -61,8 +61,18 @@ function FeatureSection() {
     <div className="overflow-hidden">
       <Container className="pb-24">
         <Heading as="h2" className="max-w-3xl">
-            Monitoruj, analizuj i optymalizuj, zarządzaj szpitalem, jak nigdy dotąd
+            Blok Operacyjny
         </Heading>
+        <p className="mt-8 text-2xl/7 font-medium text-gray-950/75 sm:text-4xl/8">
+        Od ponad 10 lat tworzymy innowacyjne rozwiązania usprawniające zarządzanie blokiem operacyjnym.
+        </p>
+
+        <p className="mt-8 text-lg/7 font-medium text-gray-950/75 sm:text-xl/8">
+            Doskonale rozumiemy potrzeby placówek medycznych, ponieważ sami jesteśmy doświadczonymi menedżerami ochrony zdrowia oraz praktykującymi lekarzami. Każdego dnia współpracujemy z dziesiątkami specjalistów, optymalizując procesy i zwiększając efektywność pracy. Nie jesteśmy tylko obserwatorami – aktywnie uczestniczymy w codziennym funkcjonowaniu bloku operacyjnego, co pozwala nam lepiej niż ktokolwiek inny identyfikować realne potrzeby personelu. Potrafimy skutecznie przełożyć język lekarzy i personelu medycznego na język programistów, zapewniając płynną komunikację i precyzyjne wdrożenia. Dysponujemy stałym, doświadczonym zespołem IT, który doskonale rozumie specyfikę branży medycznej.
+        </p>
+        <p className="mt-8 text-lg/7 font-medium text-gray-950/75 sm:text-xl/8">
+            Tworzymy innowacje – nie kopiujemy!
+        </p>
         <Screenshot
           width={1216}
           height={768}
@@ -77,28 +87,28 @@ function FeatureSection() {
 function BentoSection() {
   return (
     <Container>
-      <Subheading>Zarządzanie szpitalem</Subheading>
+      <Subheading>LIVE 2.0</Subheading>
       <Heading as="h3" className="mt-2 max-w-3xl">
-        Kompleksowe monitorowanie operacji i pacjentów
+        Widok live na bloku operacyjnym
       </Heading>
 
       <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
         <BentoCard
-          eyebrow="Insight"
-          title="Get perfect clarity"
+          eyebrow="Podgląd na żywo"
+          title="Kompleksowe monitorowanie i planowanie wydarzeń na bloku operacyjnym"
           description="Radiant uses social engineering to build a detailed financial picture of your leads. Know their budget, compensation package, social security number, and more."
           graphic={
-            <div className="h-80 bg-[url(/screenshots/profile.png)] bg-[size:1000px_560px] bg-[left_-109px_top_-112px] bg-no-repeat" />
+            <div className="h-80 bg-[url(/screenshots/live.png)] bg-[size:1042px_796px] bg-no-repeat" />
           }
           fade={['bottom']}
           className="max-lg:rounded-t-4xl lg:col-span-3 lg:rounded-tl-4xl"
         />
         <BentoCard
-          eyebrow="Analysis"
+          eyebrow="Łatwe planowanie"
           title="Undercut your competitors"
           description="With our advanced data mining, you’ll know which companies your leads are talking to and exactly how much they’re being charged."
           graphic={
-            <div className="absolute inset-0 bg-[url(/screenshots/competitors.png)] bg-[size:1100px_650px] bg-[left_-38px_top_-73px] bg-no-repeat" />
+            <div className="absolute inset-0 bg-[url(/screenshots/planning.png)] bg-[size:1100px_650px] bg-[left_-278px_top_-273px] bg-no-repeat" />
           }
           fade={['bottom']}
           className="lg:col-span-3 lg:rounded-tr-4xl"
@@ -200,9 +210,7 @@ export default function Home() {
           <FeatureSection />
           <BentoSection />
         </div>
-        <DarkBentoSection />
       </main>
-      <Testimonials />
       <Footer />
     </div>
   )
