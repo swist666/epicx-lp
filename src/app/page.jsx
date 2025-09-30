@@ -29,7 +29,7 @@ function Hero() {
                 <Navbar
                     banner={
                         <Link
-                            href="mailto:epicx@epicx.pl"
+                            href="/kontakt"
                             className="flex items-center gap-1 rounded-full bg-fuchsia-950/35 px-3 py-0.5 text-sm/6 font-medium text-white data-hover:bg-fuchsia-950/30"
                         >
                             Napisz do nas
@@ -45,7 +45,7 @@ function Hero() {
                         Od planowania po zakończenie zabiegu – pełna cyfryzacja operacji, która zastępuje telefony i eliminuje chaos. Wszystko w jednym systemie: harmonogram, integracja z HIS, monitorowanie w czasie rzeczywistym i analityka wspierająca zarządzanie szpitalem.
                     </p>
                     <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
-                        <Button href="mailto:epicx@epicx.pl">Umów prezentację</Button>
+                        <Button href="/kontakt">Umów prezentację</Button>
                         {/* <Button variant="secondary" href="/pricing">
                 Poznaj ofertę
             </Button> */}

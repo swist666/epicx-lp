@@ -16,7 +16,7 @@ function CallToAction() {
                 </p>
             </hgroup>
             <div className="mt-6">
-                <Button className="w-full sm:w-auto" href="mailto:epicx@epicx.pl">
+                <Button className="w-full sm:w-auto" href="/kontakt">
                     Umów prezentację systemu
                 </Button>
             </div>
