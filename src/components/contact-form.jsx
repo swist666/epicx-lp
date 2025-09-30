@@ -17,7 +17,7 @@ export default function ContactForm() {
             firstName.trim().length > 1 &&
             lastName.trim().length > 1 &&
             emailValid &&
-            message.trim().length > 5 &&
+            message.trim().length > 3 &&
             consentProcessing
         )
     }, [firstName, lastName, email, message, consentProcessing])
