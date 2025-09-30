@@ -9,7 +9,6 @@ export default function ContactForm() {
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
     const [consentProcessing, setConsentProcessing] = useState(false)
-    const [consentMarketing, setConsentMarketing] = useState(false)
     const [status, setStatus] = useState({ state: 'idle' })
 
     const isValid = useMemo(() => {
@@ -38,7 +37,6 @@ export default function ContactForm() {
                     email,
                     message,
                     consentProcessing,
-                    consentMarketing,
                 }),
             })
 
@@ -53,7 +51,6 @@ export default function ContactForm() {
             setEmail('')
             setMessage('')
             setConsentProcessing(false)
-            setConsentMarketing(false)
         } catch (err) {
             setStatus({ state: 'error', error: err.message })
         }
@@ -127,22 +124,10 @@ export default function ContactForm() {
                         realizacji zapytania zgodnie z polityką prywatności.
                     </span>
                 </label>
-                <label className="flex items-start gap-3">
-                    <input
-                        type="checkbox"
-                        checked={consentMarketing}
-                        onChange={(e) => setConsentMarketing(e.target.checked)}
-                        className="mt-1 size-4 rounded border-black/20 text-gray-900 focus:ring-gray-900/20"
-                    />
-                    <span className="text-sm text-gray-700">
-                        Wyrażam zgodę na otrzymywanie informacji handlowych drogą
-                        elektroniczną (opcjonalnie).
-                    </span>
-                </label>
             </div>
 
             <div className="my-8 flex items-center gap-4">
-                <Button type="submit" disabled={!isValid || status.state === 'loading'}>
+                <Button type="submit" className={isValid && status.state !== 'loading' ? 'cursor-pointer' : 'cursor-default'} disabled={!isValid || status.state === 'loading'}>
                     {status.state === 'loading' ? 'Wysyłanie…' : 'Wyślij wiadomość'}
                 </Button>
                 {status.state === 'success' && (

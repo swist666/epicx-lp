@@ -9,7 +9,6 @@ export async function POST(request) {
       email,
       message,
       consentProcessing,
-      consentMarketing,
     } = body || {}
 
     if (

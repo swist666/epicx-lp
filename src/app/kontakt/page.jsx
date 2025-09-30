@@ -3,7 +3,7 @@ import { Heading, Lead, Subheading } from '@/components/text'
 import { PlusGrid, PlusGridItem, PlusGridRow } from '@/components/plus-grid'
 import { Navbar } from '@/components/navbar'
 import { Footer } from '@/components/footer'
-import { GradientBackground } from '@/components/gradient'
+import { Gradient, GradientBackground } from '@/components/gradient'
 import dynamic from 'next/dynamic'
 
 const ContactForm = dynamic(() => import('@/components/contact-form'), {
@@ -34,11 +34,25 @@ export default function KontaktPage() {
                     </PlusGridRow>
                 </PlusGrid>
             </Container>
-            <Container className="pb-24">
+            <div className="mx-2 my-8">
+                <Gradient className="relative rounded-4xl">
+                    <div className="absolute inset-2 rounded-4xl bg-white/85" />
+                    <Container className="relative py-12">
+                        <ContactForm />
+                    </Container>
+                </Gradient>
+            </div>
+            <Container className="py-16 sm:py-24">
                 <PlusGrid>
                     <PlusGridRow>
-                        <PlusGridItem>
-                            <ContactForm />
+                        <PlusGridItem className="py-4">
+                            <Subheading>Firma</Subheading>
+                            <Heading className="mt-2">epicX sp. z o.o.</Heading>
+                            <Lead className="mt-6">
+                                ul. Opolska 149<br />
+                                52-013 Wrocław<br />
+                                NIP: PL8993002846
+                            </Lead>
                         </PlusGridItem>
                     </PlusGridRow>
                 </PlusGrid>
