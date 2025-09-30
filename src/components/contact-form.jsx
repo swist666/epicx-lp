@@ -8,6 +8,7 @@ export default function ContactForm() {
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
     const [email, setEmail] = useState('')
+    const [phone, setPhone] = useState('')
     const [message, setMessage] = useState('')
     const [consentProcessing, setConsentProcessing] = useState(false)
     const [status, setStatus] = useState({ state: 'idle' })
@@ -18,15 +19,18 @@ export default function ContactForm() {
 
     const isValid = useMemo(() => {
         const emailValid = /.+@.+\..+/.test(email)
+        const phoneTrimmed = phone.trim()
+        const phoneValid = phoneTrimmed === '' || /^[+()0-9\s-]{6,20}$/.test(phoneTrimmed)
         return (
             firstName.trim().length > 1 &&
             lastName.trim().length > 1 &&
             emailValid &&
+            phoneValid &&
             message.trim().length > 3 &&
             consentProcessing &&
             Boolean(turnstileToken)
         )
-    }, [firstName, lastName, email, message, consentProcessing, turnstileToken])
+    }, [firstName, lastName, email, phone, message, consentProcessing, turnstileToken])
 
     // Render Cloudflare Turnstile once script is available and site key is present
     useEffect(() => {
@@ -66,6 +70,7 @@ export default function ContactForm() {
                     firstName,
                     lastName,
                     email,
+                    phone,
                     message,
                     consentProcessing,
                     turnstileToken,
@@ -88,6 +93,7 @@ export default function ContactForm() {
             setFirstName('')
             setLastName('')
             setEmail('')
+            setPhone('')
             setMessage('')
             setConsentProcessing(false)
             try {
@@ -165,6 +171,20 @@ export default function ContactForm() {
                         className="mt-1 block w-full rounded-xl border border-black/10 bg-white px-3 py-2 text-gray-900 shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-900/10"
                         placeholder="twoj@przyklad.pl"
                         autoComplete="email"
+                    />
+                </div>
+
+                <div className="mt-6">
+                    <label className="block text-sm font-medium text-gray-700">Telefon (opcjonalnie)</label>
+                    <input
+                        type="tel"
+                        inputMode="tel"
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                        pattern="^[+()0-9\\s-]{6,20}$"
+                        className="mt-1 block w-full rounded-xl border border-black/10 bg-white px-3 py-2 text-gray-900 shadow-sm placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-900/10"
+                        placeholder="np. +48 123 456 789"
+                        autoComplete="tel"
                     />
                 </div>
 

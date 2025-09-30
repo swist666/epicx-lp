@@ -7,6 +7,7 @@ export async function POST(request) {
       firstName,
       lastName,
       email,
+      phone,
       message,
       consentProcessing,
       turnstileToken,
@@ -17,6 +18,7 @@ export async function POST(request) {
       !lastName ||
       !email ||
       !/.+@.+\..+/.test(email) ||
+      (phone && !/^[+()0-9\s-]{6,20}$/.test(String(phone).trim())) ||
       !message ||
       String(message).trim().length < 3 ||
       consentProcessing !== true ||
@@ -68,6 +70,7 @@ export async function POST(request) {
       <div style="font-family:ui-sans-serif,system-ui;line-height:1.5">
         <p style="margin:0 0 8px 0"><strong>Imię i nazwisko:</strong> ${firstName} ${lastName}</p>
         <p style="margin:0 0 8px 0"><strong>Email:</strong> ${email}</p>
+        ${phone ? '<p style="margin:0 0 8px 0"><strong>Telefon:</strong> ' + String(phone).replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</p>' : ''}
         <p style="margin:12px 0 0 0;white-space:pre-wrap">${
           String(message).replace(/</g, '&lt;').replace(/>/g, '&gt;')
         }</p>

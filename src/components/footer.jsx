@@ -112,7 +112,7 @@ function SocialLinks() {
     return (
         <>
             <Link
-                href="http://linkedin.com/company/epicx-sp-z-o-o"
+                href="https://linkedin.com/company/epicx-sp-z-o-o"
                 target="_blank"
                 aria-label="Visit us on LinkedIn"
                 className="text-gray-950 data-hover:text-gray-950/75"
