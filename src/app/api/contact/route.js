@@ -39,9 +39,6 @@ export async function POST(request) {
       <div style="font-family:ui-sans-serif,system-ui;line-height:1.5">
         <p style="margin:0 0 8px 0"><strong>Imię i nazwisko:</strong> ${firstName} ${lastName}</p>
         <p style="margin:0 0 8px 0"><strong>Email:</strong> ${email}</p>
-        <p style="margin:0 0 8px 0"><strong>Zgoda na przetwarzanie danych:</strong> ${
-          consentProcessing ? 'TAK' : 'NIE'
-        }</p>
         <p style="margin:12px 0 0 0;white-space:pre-wrap">${
           String(message).replace(/</g, '&lt;').replace(/>/g, '&gt;')
         }</p>
