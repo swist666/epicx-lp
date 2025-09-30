@@ -17,7 +17,7 @@ export async function POST(request) {
       !email ||
       !/.+@.+\..+/.test(email) ||
       !message ||
-      String(message).trim().length < 5 ||
+      String(message).trim().length < 3 ||
       consentProcessing !== true
     ) {
       return NextResponse.json({ error: 'Invalid input' }, { status: 400 })
