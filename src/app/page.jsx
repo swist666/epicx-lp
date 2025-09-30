@@ -61,15 +61,24 @@ function FeatureSection() {
         <div className="overflow-hidden">
             <Container className="pb-24">
                 <Heading as="h2" className="max-w-3xl">
-                    Blok Operacyjny
+                    Blok Operacyjny – nasza specjalizacja
                 </Heading>
                 <p className="mt-8 text-2xl/7 font-medium text-gray-950/75 sm:text-4xl/8">
-                    Od ponad 10 lat tworzymy innowacyjne rozwiązania usprawniające zarządzanie blokiem operacyjnym.
+                    Od ponad 10 lat tworzymy rozwiązania, które zmieniają sposób zarządzania operacjami.
                 </p>
 
                 <p className="mt-8 text-lg/7 font-medium text-gray-950/75 sm:text-xl/8">
-                    Doskonale rozumiemy potrzeby placówek medycznych, ponieważ sami jesteśmy doświadczonymi menedżerami ochrony zdrowia oraz praktykującymi lekarzami. Każdego dnia współpracujemy z dziesiątkami specjalistów, optymalizując procesy i zwiększając efektywność pracy. Nie jesteśmy tylko obserwatorami – aktywnie uczestniczymy w codziennym funkcjonowaniu bloku operacyjnego, co pozwala nam lepiej niż ktokolwiek inny identyfikować realne potrzeby personelu. Potrafimy skutecznie przełożyć język lekarzy i personelu medycznego na język programistów, zapewniając płynną komunikację i precyzyjne wdrożenia. Dysponujemy stałym, doświadczonym zespołem IT, który doskonale rozumie specyfikę branży medycznej.
+                    Doskonale rozumiemy potrzeby szpitali, bo sami mamy doświadczenie zarówno jako menedżerowie ochrony zdrowia, jak i praktykujący lekarze. Każdego dnia współpracujemy z zespołami medycznymi, aby usprawniać procesy i zwiększać efektywność pracy bloku operacyjnego.
                 </p>
+
+                <p className="mt-8 text-lg/7 font-medium text-gray-950/75 sm:text-xl/8">
+                    Nie jesteśmy biernymi obserwatorami – aktywnie uczestniczymy w codziennym funkcjonowaniu sal operacyjnych, co pozwala nam trafnie identyfikować realne potrzeby personelu. Dzięki temu potrafimy przełożyć język kliniczny na język technologii, tworząc systemy, które naprawdę wspierają codzienną pracę.
+                </p>
+
+                <p className="mt-8 text-lg/7 font-medium text-gray-950/75 sm:text-xl/8">
+                    Nasz zespół IT ma wieloletnie doświadczenie w projektowaniu rozwiązań dla medycyny. Stawiamy na płynną komunikację, precyzyjne wdrożenia i pełne zrozumienie specyfiki branży.
+                </p>
+
                 <p className="mt-8 text-lg/7 font-medium text-gray-950/75 sm:text-xl/8">
                     Tworzymy innowacje – nie kopiujemy!
                 </p>
@@ -87,16 +96,16 @@ function FeatureSection() {
 function BentoSection() {
     return (
         <Container>
-            <Subheading>LIVE 2.0</Subheading>
+            <Subheading>Widok live na bloku operacyjnym</Subheading>
             <Heading as="h3" className="mt-2 max-w-3xl">
-                Widok live na bloku operacyjnym
+                Monitoruj postęp operacji w czasie rzeczywistym
             </Heading>
 
             <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-6 lg:grid-rows-2">
                 <BentoCard
                     eyebrow="Podgląd na żywo"
-                    title="Kompleksowe monitorowanie i planowanie wydarzeń na bloku operacyjnym"
-                    description="Radiant uses social engineering to build a detailed financial picture of your leads. Know their budget, compensation package, social security number, and more."
+                    title="Kompleksowe monitorowanie wydarzeń na bloku operacyjnym"
+                    description="Status każdej operacji w czasie rzeczywistym – od przygotowania pacjenta po zakończenie zabiegu. Zespół ma zawsze aktualne informacje o etapie operacji, dostępności sal i harmonogramie, bez konieczności wykonywania telefonów."
                     graphic={
                         <div className="h-80 bg-[url(/screenshots/live.png)] bg-[size:1042px_796px] bg-no-repeat" />
                     }
@@ -104,9 +113,9 @@ function BentoSection() {
                     className="max-lg:rounded-t-4xl lg:col-span-3 lg:rounded-tl-4xl"
                 />
                 <BentoCard
-                    eyebrow="Łatwe planowanie"
-                    title="Undercut your competitors"
-                    description="With our advanced data mining, you’ll know which companies your leads are talking to and exactly how much they’re being charged."
+                    eyebrow="Łatwe planowanie operacji"
+                    title="Nowy standard planowania zabiegów."
+                    description="Intuicyjny harmonogram sprawia, że planowanie jest szybkie i przejrzyste. Każda zmiana widoczna jest natychmiast dla całego personelu, co eliminuje pomyłki i problemy z komunikacją."
                     graphic={
                         <div className="absolute inset-0 bg-[url(/screenshots/planning.png)] bg-[size:1100px_650px] bg-[left_-278px_top_-273px] bg-no-repeat" />
                     }
@@ -114,28 +123,28 @@ function BentoSection() {
                     className="lg:col-span-3 lg:rounded-tr-4xl"
                 />
                 <BentoCard
-                    eyebrow="Speed"
-                    title="Built for power users"
-                    description="It’s never been faster to cold email your entire contact list using our streamlined keyboard shortcuts."
+                    eyebrow="Komunikacja bez telefonów"
+                    title="Wzywanie pacjentów i przekazywanie informacji odbywa się przez dedykowane tablety, bez konieczności wykonywania telefonów."
+                    description="Blok operacyjny i oddziały komunikują się w czasie rzeczywistym. Wszystko odbywa się cyfrowo – prosto, szybko i bez ryzyka pomyłek. Personel zawsze wie, kiedy pacjent jest gotowy i na jakim etapie znajduje się zabieg."
                     graphic={
-                        <div className="flex size-full pt-10 pl-10">
-                            <Keyboard highlighted={['LeftCommand', 'LeftShift', 'D']} />
-                        </div>
+                        <div className="absolute inset-0 bg-[url(/screenshots/call.png)] bg-[size:661px_422px] bg-[left_-50px_top_-48px] bg-no-repeat" />
                     }
                     className="lg:col-span-2 lg:rounded-bl-4xl"
                 />
                 <BentoCard
-                    eyebrow="Source"
-                    title="Get the furthest reach"
-                    description="Bypass those inconvenient privacy laws to source leads from the most unexpected places."
-                    graphic={<LogoCluster />}
+                    eyebrow="Cyfrowy oddział"
+                    title="Podgląd w czasie rzeczywistym bloku operacyjnego i sal chorych."
+                    description="Ekrany zamontowane na oddziale pokazują postęp operacji i status pacjentów, co pozwala personelowi szybciej reagować i lepiej organizować pracę. Dodatkowo moduł łóżka wspiera zarządzanie dostępnością i obłożeniem sal chorych."
+                    graphic={
+                        <div className="absolute inset-0 bg-[url(/screenshots/bads.png)] bg-[size:840px_599px] bg-[left_-0px_top_-55px] bg-no-repeat" />
+                    }
                     className="lg:col-span-2"
                 />
                 <BentoCard
-                    eyebrow="Limitless"
-                    title="Sell globally"
-                    description="Radiant helps you sell in locations currently under international embargo."
-                    graphic={<Map />}
+                    eyebrow="Bezpieczna chmura"
+                    title="Spełniamy najwyższe standardy bezpieczeństwa danych."
+                    description="System działa w chmurze, zgodnie z rygorystycznymi wymaganiami ochrony danych medycznych. Dostęp dla personelu jest szyfrowany i bezpieczny z każdego miejsca – w szpitalu i poza nim."
+                    graphic={<LogoCluster />}
                     className="max-lg:rounded-b-4xl lg:col-span-2 lg:rounded-br-4xl"
                 />
             </div>
