@@ -211,7 +211,14 @@ export default function ContactForm() {
                         />
                         <span className="text-sm text-gray-700">
                             Wyrażam zgodę na przetwarzanie moich danych osobowych w celu
-                            realizacji zapytania zgodnie z polityką prywatności.
+                            realizacji zapytania zgodnie z&nbsp;
+                            <a
+                                href="/polityka-prywatnosci"
+                                rel="noopener noreferrer"
+                                className="underline text-gray-700 hover:text-gray-900"
+                            >
+                                polityką prywatności
+                            </a>.
                         </span>
                     </label>
                 </div>
