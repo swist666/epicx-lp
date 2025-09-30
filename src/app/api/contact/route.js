@@ -9,6 +9,7 @@ export async function POST(request) {
       email,
       message,
       consentProcessing,
+      turnstileToken,
     } = body || {}
 
     if (
@@ -18,9 +19,37 @@ export async function POST(request) {
       !/.+@.+\..+/.test(email) ||
       !message ||
       String(message).trim().length < 3 ||
-      consentProcessing !== true
+      consentProcessing !== true ||
+      !turnstileToken
     ) {
       return NextResponse.json({ error: 'Invalid input' }, { status: 400 })
+    }
+
+    // Verify Cloudflare Turnstile
+    const TURNSTILE_SECRET_KEY = process.env.TURNSTILE_SECRET_KEY
+    if (!TURNSTILE_SECRET_KEY) {
+      return NextResponse.json(
+        { error: 'Turnstile is not configured on server' },
+        { status: 500 },
+      )
+    }
+
+    const verifyRes = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({
+        secret: TURNSTILE_SECRET_KEY,
+        response: String(turnstileToken),
+        // Optionally you can pass remoteip for additional security
+      }),
+    })
+
+    const verifyJson = await verifyRes.json().catch(() => null)
+    if (!verifyRes.ok || !verifyJson?.success) {
+      return NextResponse.json(
+        { error: 'Failed Turnstile verification' },
+        { status: 403 },
+      )
     }
 
     const RESEND_API_KEY = process.env.RESEND_API_KEY
