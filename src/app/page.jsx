@@ -38,8 +38,8 @@ function Hero() {
                     }
                 />
                 <div className="pt-16 pb-24 sm:pt-24 sm:pb-32 md:pt-32 md:pb-48">
-                    <h1 className="font-display text-6xl/[0.9] font-medium tracking-tight text-balance text-gray-950 sm:text-8xl/[0.8] md:text-8xl/[0.8]">
-                        Redefiniujemy zasady. Tworzymy cyfrowy blok operacyjny przyszłości.
+                    <h1 className="font-display text-4xl/[0.9] font-medium tracking-tight text-balance text-gray-950 sm:text-4xl/[0.8] md:text-6xl/[0.8]">
+                        Nowoczesne oprogramowanie dla bloku operacyjnego
                     </h1>
                     <p className="mt-8 max-w-lg text-xl/7 font-medium text-gray-950/75 sm:text-2xl/8">
                         Od planowania po zakończenie zabiegu – pełna cyfryzacja operacji, która zastępuje telefony i eliminuje chaos. Wszystko w jednym systemie: harmonogram, integracja z HIS, monitorowanie w czasie rzeczywistym i analityka wspierająca zarządzanie szpitalem.
@@ -129,6 +129,7 @@ function BentoSection() {
                     graphic={
                         <div className="absolute inset-0 bg-[url(/screenshots/call.png)] bg-[size:661px_422px] bg-[left_-50px_top_-48px] bg-no-repeat" />
                     }
+                    fade={['bottom']}
                     className="lg:col-span-2 lg:rounded-bl-4xl"
                 />
                 <BentoCard
@@ -138,6 +139,7 @@ function BentoSection() {
                     graphic={
                         <div className="absolute inset-0 bg-[url(/screenshots/bads.png)] bg-[size:840px_599px] bg-[left_-0px_top_-55px] bg-no-repeat" />
                     }
+                    fade={['bottom']}
                     className="lg:col-span-2"
                 />
                 <BentoCard
