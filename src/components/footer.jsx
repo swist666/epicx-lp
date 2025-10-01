@@ -145,8 +145,8 @@ export function Footer() {
                                     <Copyright />
                                 </PlusGridItem>
                             </div>
-                            <div class="flex-1"></div>
-                            <div class="flex items-center px-4">
+                            <div className="flex-1"></div>
+                            <div className="flex items-center px-4">
                                 <Link
                                     href="/polityka-prywatnosci"
                                     className="text-sm/6 font-medium text-gray-950 data-hover:text-gray-950/75"
