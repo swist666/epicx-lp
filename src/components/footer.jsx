@@ -141,18 +141,21 @@ export function Footer() {
                     <PlusGrid className="pb-16">
                         <PlusGridRow className="flex justify-between">
                             <div>
-                                <PlusGridItem className="py-3 flex">
+                                <PlusGridItem className="py-3 px-4 flex">
                                     <Copyright />
                                 </PlusGridItem>
                             </div>
+                            <div class="flex-1"></div>
+                            <div class="flex items-center px-4">
+                                <Link
+                                    href="/polityka-prywatnosci"
+                                    className="text-sm/6 font-medium text-gray-950 data-hover:text-gray-950/75"
+                                >
+                                    Polityka prywatności
+                                </Link>
+                            </div>
                             <div className="flex">
                                 <PlusGridItem className="flex items-center gap-8 py-3 px-4">
-                                    <Link
-                                        href="/polityka-prywatnosci"
-                                        className="text-sm/6 font-medium text-gray-950 data-hover:text-gray-950/75"
-                                    >
-                                        Polityka prywatności
-                                    </Link>
                                     <SocialLinks />
                                 </PlusGridItem>
                             </div>
