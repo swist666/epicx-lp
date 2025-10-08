@@ -3,6 +3,7 @@ import { Footer } from '@/components/footer'
 import { GradientBackground } from '@/components/gradient'
 import { Navbar } from '@/components/navbar'
 import { Heading, Subheading } from '@/components/text'
+import { Link } from '@/components/link'
 
 export const metadata = {
     title: 'Polityka prywatności',
@@ -145,10 +146,42 @@ export default function PrivacyPolicyPage() {
                         </p>
                         <p className="text-sm/6 text-gray-600">W różnych przeglądarkach możesz tego dokonać z pomocą linków, np.:</p>
                         <ul className="list-disc pl-6 text-sm/6 text-gray-600">
-                            <li>Firefox</li>
-                            <li>Chrome</li>
-                            <li>Opera</li>
-                            <li>Safari</li>
+                            <li>
+                                <Link
+                                    href="https://support.mozilla.org/pl/kb/wzmocniona-ochrona-przed-sledzeniem-firefox-desktop?redirectslug=W%C5%82%C4%85czanie+i+wy%C5%82%C4%85czanie+obs%C5%82ugi+ciasteczek&redirectlocale=pl"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Firefox
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="https://support.google.com/chrome/answer/95647?hl=pl"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Chrome
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="https://help.opera.com/pl/latest/web-preferences/#cookies"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Opera
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
+                                    href="https://support.microsoft.com/pl-pl/windows/zarz%C4%85dzanie-plikami-cookie-w-przegl%C4%85darce-microsoft-edge-wy%C5%9Bwietlanie-zezwalanie-blokowanie-usuwanie-i-u%C5%BCywanie-168dab11-0753-043d-7c16-ede5947fc64d"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Edge
+                                </Link>
+                            </li>
                         </ul>
                         <p className="text-sm/6 text-gray-600">
                             Mechanizmy antyspamowe (opcjonalne) – chronią formularze przed nadużyciami;
