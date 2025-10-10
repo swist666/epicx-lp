@@ -190,7 +190,7 @@ export default function PrivacyPolicyPage() {
                     </section>
                     <section className="mt-10 space-y-4">
                         <h2 className="text-2xl font-medium tracking-tight">8. Przetwarzanie danych osobowych</h2>
-                        <p className="text-sm/6 text-gray-600">Informacje na temat przetwarzania danych osobowych przez LUX MED - <Link href="/przetwarzanie-danych-osobowych-w-zwiazku-z-prowadzona-wspolpraca-biznesowa.pdf" target="_blank" rel="noopener noreferrer">zobacz PDF</Link></p>
+                        <p className="text-sm/6 text-gray-600">Informacje na temat przetwarzania danych osobowych przez epicX - <Link href="/przetwarzanie-danych-osobowych-w-zwiazku-z-prowadzona-wspolpraca-biznesowa.pdf" target="_blank" rel="noopener noreferrer">zobacz PDF</Link></p>
                     </section>
                 </article>
             </Container>
