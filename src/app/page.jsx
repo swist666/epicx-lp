@@ -64,7 +64,7 @@ function FeatureSection() {
                     Blok Operacyjny – nasza specjalizacja
                 </Heading>
                 <p className="mt-8 text-2xl/7 font-medium text-gray-950/75 sm:text-4xl/8">
-                    Od ponad 10 lat tworzymy rozwiązania, które zmieniają sposób zarządzania operacjami.
+                    Tworzymy rozwiązania, które zmieniają sposób zarządzania operacjami.
                 </p>
 
                 <p className="mt-8 text-lg/7 font-medium text-gray-950/75 sm:text-xl/8">
